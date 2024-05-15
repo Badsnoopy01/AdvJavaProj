@@ -21,6 +21,16 @@ li a {
 li a:hover {
     background-color: #C97F4E;
 }
+
+.disabled a{
+    pointer-events: none;
+    color: #6F4A38;
+}
+
+.active {
+    background-color: #977359;
+}
+
 body {
     background-color: #EDCF8F;
 }

@@ -4,27 +4,25 @@
     <head>
         <link rel="stylesheet" href="styles.css">
         <title>Giraffe World</title>
+        <script src="giraffe.js"></script>
     </head>
     <body>
         <ul id="navbar">
-            <li><a href="giraffes.jsp">Giraffe World</a></li>
-            <li><a href="index.jsp">Login</a></li>
-            <li><a href="settings.jsp">Edit Account</a></li>
-            <li><a href="signup.jsp">New User Sign Up</a></li>
-            <li><a href="logout.jsp">Log Out</a></li>
+            <li><a href="index.html">Login</a></li>
+            <li class="active"><a href="signup.html">New User Sign Up</a></li>
         </ul>
         <h3>Enter a username and password to create an account!</h3>
         <label>
             Username
-            <input type="text" />
+            <input id="signupUsername" type="text"/>
         </label>
         <label>
             Password
-            <input type="password"/>
+            <input id="signupPassword" type="password"/>
         </label>
-        <button type="submit">Sign Up</button>
+        <button type="submit" onclick="giraffe.signup()">Sign Up</button>
         <br/>
         <p>Already have an account with Giraffe World? Sign in here:</p>
-        <a href="index.jsp"><button type="button">Create an account</button></a>
+        <a href="index.html"><button type="button">Login with existing account</button></a>
     </body>
 </html>
