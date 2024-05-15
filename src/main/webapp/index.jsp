@@ -13,7 +13,7 @@
       <li><a href="signup.jsp">New User Sign Up</a></li>
       <li><a href="logout.jsp">Log Out</a></li>
     </ul>
-    <h1><%= "Welcome to Giraffe World!" %></h1>
+    <h3><%= "Welcome to Giraffe World!" %></h3>
     <br/>
     <p>Enter your username and password to login</p>
     <label>
@@ -24,9 +24,9 @@
       Password
       <input type="password"/>
     </label>
-    <button type="submit">Sign Up</button>
+    <a href="giraffes.jsp"><button type="submit">Login</button></a>
     <br/>
     <p>Don't have an account with Giraffe World? Create one here:</p>
-    <a href="login.jsp"><button type="button">Create an account</button></a>
+    <a href="signup.jsp"><button type="button">Create an account</button></a>
   </body>
 </html>

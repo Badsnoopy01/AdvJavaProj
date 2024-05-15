@@ -12,7 +12,7 @@
             <li><a href="signup.jsp">New User Sign Up</a></li>
             <li><a href="logout.jsp">Log Out</a></li>
         </ul>
-        <h1>Edit your account's Username or Password</h1>
+        <h3>Edit your account's Username or Password</h3>
         <br/>
         <p>Enter your new account details:</p>
         <label>

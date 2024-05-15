@@ -12,7 +12,7 @@
         <li><a href="signup.jsp">New User Sign Up</a></li>
         <li><a href="logout.jsp">Log Out</a></li>
     </ul>
-    <h1>Look at how cute this little guy is!!!</h1>
+    <h3>Look at how cute this little guy is!!!</h3>
     <img src="https://www.usatoday.com/gcdn/authoring/authoring-images/2024/03/19/USAT/73029857007-7-gc.jpg?crop=801,800,x240,y0">
 </body>
 </html>
