@@ -16,7 +16,7 @@
         <h3>Enter a username and password to create an account!</h3>
         <label>
             Username
-            <input type="text"/>
+            <input type="text" />
         </label>
         <label>
             Password

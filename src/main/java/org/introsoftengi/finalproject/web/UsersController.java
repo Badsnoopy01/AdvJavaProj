@@ -1,6 +1,9 @@
 package org.introsoftengi.finalproject.web;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 import jakarta.ejb.EJB;
@@ -137,6 +140,15 @@ public class UsersController implements Serializable {
     public String previous() {
         recreateModel();
         return "List";
+    }
+
+    public boolean login(String username, String password) {
+        List users = ejbFacade.findByUserNameAndPassword(username, password);
+        if (users.size() > 0 && users.get(0) instanceof User && Objects.nonNull(users.get(0))) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public SelectItem[] getItemsAvailableSelectMany() {
