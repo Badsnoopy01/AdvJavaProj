@@ -61,13 +61,15 @@ public class UsersController implements Serializable {
         return "Create";
     }
 
-    public String create() {
+    public String create(String username, String password) {
         try {
+            current.setUserName(username);
+            current.setPassword(password);
             getFacade().create(current);
-            Util.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("UserCreated"));
+//            Util.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("UserCreated"));
             return prepareCreate();
         } catch (Exception e) {
-            Util.addErrorMessage(e, ResourceBundle.getBundle("/Bundle").getString("PersistenceErrorOccured"));
+//            Util.addErrorMessage(e, ResourceBundle.getBundle("/Bundle").getString("PersistenceErrorOccured"));
             return null;
         }
     }

@@ -7,16 +7,16 @@
     </head>
     <body>
         <ul id="navbar">
-            <li><a href="giraffes.html">Giraffe World</a></li>
-            <li class="active"><a href="settings.html">Edit Account</a></li>
-            <li><a href="logout.html">Log Out</a></li>
+            <li><a href="giraffes.jsp">Giraffe World</a></li>
+            <li class="active"><a href="settings.jsp">Edit Account</a></li>
+            <li><a href="logout.jsp">Log Out</a></li>
         </ul>
-        <h3>Edit your account's Username</h3>
+        <h3>Edit your account's Password</h3>
         <br/>
         <p>Enter your new account details:</p>
         <label>
-            New Username
-            <input id="updateUsername" type="text"/>
+            New Password
+            <input id="updatePassword" type="text"/>
         </label>
         <button type="submit" onclick="giraffe.updateAccount()">Save Changes</button>
     </body>

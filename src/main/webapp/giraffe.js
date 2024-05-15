@@ -9,7 +9,7 @@ class Giraffe {
         console.log(username + " " + password)
 
         // Send request to API, if succesful navigate to giraffes.html
-        window.location = "giraffes.html";
+        window.location = "giraffes.jsp";
     }
 
     signup(){
@@ -18,12 +18,12 @@ class Giraffe {
         console.log(username + " " + password)
 
         // Send request to API, if succesful navigate to giraffes.html
-        window.location = "giraffes.html";
+        window.location = "giraffes.jsp";
     }
 
     updateAccount(){
-        let username = document.getElementById("updateUsername").value;
-        console.log(`New username: ${username}`)
+        let password = document.getElementById("updatePassword").value;
+        console.log(`New password: ${password}`)
     }
 
     logout(){
