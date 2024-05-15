@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:h="jakarta.faces.html">
+    <body>
+        <ul id="navbar">
+            <li><a href="index.jsp">Login</a></li>
+            <li class="active"><a href="signup.xhtml">New User Sign Up</a></li>
+        </ul>
+        <h3>Enter a username and password to create an account!</h3>
+            <label>
+                Username<h:inputText id="createUsername" name="createUsername" type="text" value="#{usersController.selected.userName}" />
+            </label>
+            <label>
+                Password
+                <h:inputText id="createPassword" name="createPassword" type="password" value="#{usersController.selected.password}" />
+            </label>
+            <h:commandLink type="submit" name="create" action="#{usersController.create}" value="Create Account"/>
+        <br/>
+        <p>Already have an account with Giraffe World? Sign in here:</p>
+        <a href="index.jsp"><button type="button">Login with existing account</button></a>
+    </body>
+</html>

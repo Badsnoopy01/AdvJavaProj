@@ -22,7 +22,7 @@ public class UsersFacade extends AbstractFacade<User> {
     }
 
     public List<User> findByUserNameAndPassword(String username, String password) {
-        List results = em.createQuery("SELECT u FROM User u WHERE u.username = :username AND u.password = :password")
+        List results = em.createQuery("SELECT u FROM User u WHERE u.userName = :username AND u.password = :password")
                 .setParameter("username", username).setParameter("password", password).getResultList();
         return results;
     }

@@ -26,6 +26,6 @@
     </form>
     <br/>
     <p>Don't have an account with Giraffe World? Create one here:</p>
-    <a href="signup.jsp"><button type="button">Create an account</button></a>
+    <a href="signup.xhtml"><button type="button">Create an account</button></a>
   </body>
 </html>

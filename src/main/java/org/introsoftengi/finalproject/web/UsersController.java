@@ -7,6 +7,7 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 import jakarta.ejb.EJB;
+import jakarta.ejb.Stateless;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
@@ -27,7 +28,8 @@ public class UsersController implements Serializable {
     private User current;
     @Getter
     private DataModel items = null;
-    @EJB private UsersFacade ejbFacade;
+    @EJB
+    private UsersFacade ejbFacade;
     private int selectedItemIndex;
 
     public UsersController() {
@@ -61,11 +63,11 @@ public class UsersController implements Serializable {
         return "Create";
     }
 
-    public String create(String username, String password) {
+    public String create() {
         try {
-            current.setUserName(username);
-            current.setPassword(password);
-            getFacade().create(current);
+//            current.setUserName(username);
+//            current.setPassword(password);
+            ejbFacade.create(current);
 //            Util.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("UserCreated"));
             return prepareCreate();
         } catch (Exception e) {
@@ -145,7 +147,7 @@ public class UsersController implements Serializable {
     }
 
     public boolean login(String username, String password) {
-        List users = ejbFacade.findByUserNameAndPassword(username, password);
+        List users = getFacade().findByUserNameAndPassword(username, password);
         if (users.size() > 0 && users.get(0) instanceof User && Objects.nonNull(users.get(0))) {
             return true;
         } else {
